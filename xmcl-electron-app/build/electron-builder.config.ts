@@ -32,7 +32,7 @@ export const config = {
     to: '.',
     filter: 'package.json',
   }],
-  artifactName: 'xmcl-${version}-${platform}-${arch}.${ext}',
+  artifactName: 'cubion-${version}-${platform}-${arch}.${ext}',
   appx: {
     displayName: 'Cubion',
     applicationId: 'xmcl',
@@ -43,7 +43,7 @@ export const config = {
     setBuildNumber: true,
   },
   dmg: {
-    artifactName: 'xmcl-${version}-${arch}.${ext}',
+    artifactName: 'cubion-${version}-${arch}.${ext}',
     contents: [
       {
         x: 410,
@@ -96,7 +96,7 @@ export const config = {
     },
     category: 'Game',
     icon: 'icons/dark.icns',
-    artifactName: 'xmcl-${version}-${arch}.${ext}',
+    artifactName: 'cubion-${version}-${arch}.${ext}',
     target: [
       { target: 'deb', arch: ['x64', 'arm64'] },
       { target: 'rpm', arch: ['x64', 'arm64'] },
