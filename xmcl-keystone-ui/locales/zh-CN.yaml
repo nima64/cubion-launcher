@@ -1429,7 +1429,7 @@ setup:
     language: 当前语言
     name: 设置语言
   path: 当前位置
-  title: 欢迎使用 X Minecraft Launcher。在开始前，需要您先
+  title: 欢迎使用 Cubion。在开始前，需要您先
 shaderPack:
   deletion: 删除光影包
   deletionHint: 这将把光影包文件 {path} 永久删除。
@@ -1506,8 +1506,8 @@ theme:
   selectImage: 选择图像
   selectMusic: 选择音乐
   selectVideo: 选择视频
-  title: X Minecraft Launcher
-title: X Minecraft Launcher
+  title: Cubion
+title: Cubion
 transportType:
   host: 公网地址
   prflx: 同伴反射地址

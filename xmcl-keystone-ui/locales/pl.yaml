@@ -1538,7 +1538,7 @@ setup:
     language: Język
     name: Ustaw język
   path: Bieżąca ścieżka
-  title: 'Witamy w X Minecraft Launcher. Zanim zaczniesz, musisz '
+  title: 'Witamy w Cubion. Zanim zaczniesz, musisz '
 shaderPack:
   deletion: Usuń pakiet shaderów
   deletionHint: >-
@@ -1614,8 +1614,8 @@ theme:
   selectImage: Wybierz obraz
   selectMusic: Wybierz muzykę
   selectVideo: Wybierz wideo
-  title: X Minecraft Launcher
-title: X Minecraft Launcher
+  title: Cubion
+title: Cubion
 transportType:
   host: Kandydat na gospodarza
   prflx: Refleksyjny kandydat na rówieśnika

@@ -1543,7 +1543,7 @@ setup:
     name: Nyelv beállítása
   path: Jelenlegi útvonal
   title: >-
-    Üdvözöljük az X Minecraft Launcherben. Mielőtt elkezdenéd, szükségünk van
+    Üdvözöljük az Cubionben. Mielőtt elkezdenéd, szükségünk van
     arra, hogy 
 shaderPack:
   deletion: Shader Pack törlése
@@ -1622,8 +1622,8 @@ theme:
   selectImage: Válassza a Kép lehetőséget
   selectMusic: Válassza a Zene lehetőséget
   selectVideo: Válassza a Videó lehetőséget
-  title: X Minecraft Launcher
-title: X Minecraft Launcher
+  title: Cubion
+title: Cubion
 transportType:
   host: Kiszolgáló jelölt
   prflx: Peer Reflexív jelölt

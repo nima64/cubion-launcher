@@ -1543,7 +1543,7 @@ setup:
     name: Imposta lingua
   path: Percorso corrente
   title: >-
-    Benvenuto in X Minecraft Launcher. Prima di iniziare, abbiamo bisogno che
+    Benvenuto in Cubion. Prima di iniziare, abbiamo bisogno che
     tu 
 shaderPack:
   deletion: Elimina Shader Pack
@@ -1623,8 +1623,8 @@ theme:
   selectImage: Scegli Immagine
   selectMusic: Scegli Musica
   selectVideo: Scegli Video
-  title: X Minecraft Launcher
-title: X Minecraft Launcher
+  title: Cubion
+title: Cubion
 transportType:
   host: Host Scelto
   prflx: Peer Reflexive Scelto

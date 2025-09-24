@@ -1582,7 +1582,7 @@ setup:
     name: Установить язык
   path: Текущий путь
   title: >-
-    Добро пожаловать в X Minecraft Launcher. Прежде чем начать, нам нужно, чтобы
+    Добро пожаловать в Cubion. Прежде чем начать, нам нужно, чтобы
     вы 
 shaderPack:
   deletion: Удалить набор шейдеров
@@ -1667,8 +1667,8 @@ theme:
   selectImage: Выберите изображение
   selectMusic: Выберите музыку
   selectVideo: Выберите видео
-  title: X Minecraft Launcher
-title: X Minecraft Launcher
+  title: Cubion
+title: Cubion
 transportType:
   host: Хост-кандидат
   prflx: Пиринг-рефлексивный кандидат
