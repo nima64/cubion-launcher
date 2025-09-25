@@ -22,12 +22,12 @@ export class YggdrasilSeriveRegistry {
   constructor(private app: LauncherApp) {
     this.logger = app.getLogger('YggdrasilSeriveRegistry')
     this.yggdrasilFile = createSafeFile(join(app.appDataPath, 'yggdrasil.json'), YggdrasilSchema, this.logger, undefined, async () => {
-      const yggdrasilServices = await Promise.all([
-        loadYggdrasilApiProfile('https://littleskin.cn/api/yggdrasil', app.fetch),
-        loadYggdrasilApiProfile('https://authserver.ely.by/api/authlib-injector', app.fetch),
-      ])
+      // const yggdrasilServices = await Promise.all([
+      //   loadYggdrasilApiProfile('https://littleskin.cn/api/yggdrasil', app.fetch),
+      //   loadYggdrasilApiProfile('https://authserver.ely.by/api/authlib-injector', app.fetch),
+      // ])
       return {
-        yggdrasilServices,
+        yggdrasilServices: this.yggdrasilServices
       }
     })
     app.protocol.registerHandler('authlib-injector', ({ request, response }) => {
@@ -48,16 +48,16 @@ export class YggdrasilSeriveRegistry {
 
   async load() {
     const apis = await this.yggdrasilFile.read()
-    const litteSkin = apis.yggdrasilServices.find(a => new URL(a.url).host === 'littleskin.cn')
-    if (litteSkin && (!litteSkin.authlibInjector || !litteSkin.ocidConfig)) {
-      apis.yggdrasilServices.splice(apis.yggdrasilServices.indexOf(litteSkin), 1)
-      apis.yggdrasilServices.push(await loadYggdrasilApiProfile('https://littleskin.cn/api/yggdrasil', this.app.fetch))
-    }
-    const ely = apis.yggdrasilServices.find(a => new URL(a.url).host === 'authserver.ely.by')
-    if (ely && !ely.authlibInjector) {
-      apis.yggdrasilServices.splice(apis.yggdrasilServices.indexOf(ely), 1)
-      apis.yggdrasilServices.push(await loadYggdrasilApiProfile('https://authserver.ely.by/api/authlib-injector', this.app.fetch))
-    }
+    // const litteSkin = apis.yggdrasilServices.find(a => new URL(a.url).host === 'littleskin.cn')
+    // if (litteSkin && (!litteSkin.authlibInjector || !litteSkin.ocidConfig)) {
+    //   apis.yggdrasilServices.splice(apis.yggdrasilServices.indexOf(litteSkin), 1)
+    //   apis.yggdrasilServices.push(await loadYggdrasilApiProfile('https://littleskin.cn/api/yggdrasil', this.app.fetch))
+    // }
+    // const ely = apis.yggdrasilServices.find(a => new URL(a.url).host === 'authserver.ely.by')
+    // if (ely && !ely.authlibInjector) {
+    //   apis.yggdrasilServices.splice(apis.yggdrasilServices.indexOf(ely), 1)
+    //   apis.yggdrasilServices.push(await loadYggdrasilApiProfile('https://authserver.ely.by/api/authlib-injector', this.app.fetch))
+    // }
 
     this.yggdrasilServices.push(...apis.yggdrasilServices)
   }
