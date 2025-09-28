@@ -18,7 +18,7 @@ const config = {
   assetNames: '[name]',
   entryNames: '[dir]/[name]',
   format: 'cjs',
-  sourcemap: process.env.NODE_ENV === 'production' ? 'external' : 'linked',
+  sourcemap: process.env.NODE_ENV === 'production' ? false : 'linked',
   minifyWhitespace: process.env.NODE_ENV === 'production',
   minifySyntax: process.env.NODE_ENV === 'production',
   treeShaking: true,
