@@ -25,7 +25,7 @@ export default defineConfig({
       external: ['electron'],
     },
     minify: 'terser',
-    sourcemap: true,
+    sourcemap: process.env.NODE_ENV !== 'production' ? true : false,
     terserOptions: {
       keep_classnames: true,
       keep_fnames: true,
