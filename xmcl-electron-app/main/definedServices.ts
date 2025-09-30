@@ -38,7 +38,7 @@ export const definedServices = [
   InstanceService,
   InstanceScreenshotService,
   InstanceShaderPacksService,
-  PresenceService,
+  // PresenceService,
   DiagnoseService,
   JavaService,
   LaunchService,
