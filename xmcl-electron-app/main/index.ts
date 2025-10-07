@@ -1,5 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-require('graceful-fs').gracefulify(require('fs'))
+const gracefulFs = await import('graceful-fs');
+const fs = await import('fs');
+gracefulFs.gracefulify(fs);
 
 // eslint-disable-next-line import/first
 import ElectronLauncherApp from './ElectronLauncherApp'

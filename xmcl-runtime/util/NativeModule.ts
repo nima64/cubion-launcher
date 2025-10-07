@@ -47,11 +47,11 @@ export class NativeModuleLoader<T> {
   }
 }
 
-function getDependencyIfExists(dir: string, fileName: string) {
+async function getDependencyIfExists(dir: string, fileName: string) {
   const dest = join(dir, fileName)
   try {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const mod = require(dest)
+    const mod = await import(dest);
     return mod
   } catch {
     unlink(dest).catch(() => { })

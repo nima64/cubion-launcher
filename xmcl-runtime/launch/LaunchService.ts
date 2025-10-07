@@ -669,7 +669,7 @@ export class LaunchService extends AbstractService implements ILaunchService {
       }
     } else {
       const outputDir = dirname(options.destination)
-      const absoluteOutputDir = require("path").resolve(outputDir)
+      const absoluteOutputDir = (await import("path")).resolve(outputDir);
       await ensureDir(absoluteOutputDir)
       shortcutOptions.linux = {
         filePath: process.execPath,
