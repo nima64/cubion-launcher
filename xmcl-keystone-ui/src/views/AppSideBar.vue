@@ -62,22 +62,6 @@
       class="ml-1 px-2"
       style=""
     >
-      <v-list-item
-        v-shared-tooltip.right="_ => t('multiplayer.name')"
-        link
-        class="non-moveable"
-        @click="goMultiplayer"
-      >
-        <v-list-item-icon>
-          <v-icon
-            :size="23"
-          >
-            hub
-          </v-icon>
-        </v-list-item-icon>
-        <v-list-item-title>{{ t('multiplayer.name') }}</v-list-item-title>
-      </v-list-item>
-
       <v-divider
         class="mx-1 block"
       />
@@ -127,9 +111,6 @@ function goBack() {
   back()
 }
 
-function goMultiplayer() {
-  windowController.openMultiplayerWindow()
-}
 
 </script>
 
